@@ -47,9 +47,9 @@ function App() {
             <SocialButton key={item} name={item} />
           ))}
         </section>
-        <p className="text-center mt-4 text-sm text-balance text-white">
-          Ingeniero en Sistemas con experiencia en desarrollo web y mesa de
-          soporte de TI
+        <p className="text-center mt-4 text-base text-balance text-white pb-4 leading-tight">
+          Full Stack Developer con 1 año de experiencia y formación de
+          Infraestructura TI Empresarial
         </p>
       </header>
       <main className="pt-4 px-4 ">
