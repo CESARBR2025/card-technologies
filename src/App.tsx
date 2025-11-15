@@ -1,7 +1,7 @@
 import profile from "../src/assets/profile-image.jpg";
 import { SocialButton } from "./components/SocialButton";
 import { CardCourses } from "./components/CardCourses";
-
+import { TimeLine } from "./components/TimeLine";
 function App() {
   const buttons = ["linkedin", "github", "instagram"] as const;
   const courses = ["react", "css", "node", "html"] as const;
@@ -54,23 +54,42 @@ bg-linear-to-b from-black via-sky-950 to-gray-800
             className="text-center mt-4 text-base
          text-balance text-white pb-4 leading-tight"
           >
-            Full Stack Developer con 1 año de experiencia y formación de
-            Infraestructura TI Empresarial
+            Ingeniero en Sistemas Computacionales con 1 año de experiencia en
+            desarrollo web Full Stack y más de 3 años de trayectoria en
+            infraestructura empresarial en TI
           </p>
         </header>
-        <main className="pt-4 px-4 ">
-          <div
-            className="grid
+
+        <main className="pt-4 px-4  flex flex-col">
+          <section>
+            <h2 className="text-2xl text-white font-semibold pb-4">
+              Experiencia
+            </h2>
+            <TimeLine />
+          </section>
+          <section
+            className="gap-4 flex
+          flex-col"
+          >
+            <h2
+              className="text-2xl text-white font-bold
+          "
+            >
+              Tecnologias
+            </h2>
+            <div
+              className="grid
         grid-cols-1 /* mobile */
         sm:grid-cols-3 /* tablets pequeñas */
         md:grid-cols-3 /* tablets grandes / desktop */
         gap-4
          "
-          >
-            {courses.map((item) => (
-              <CardCourses key={item} name={item} />
-            ))}
-          </div>
+            >
+              {courses.map((item) => (
+                <CardCourses key={item} name={item} />
+              ))}
+            </div>
+          </section>
         </main>
       </div>
     </section>
