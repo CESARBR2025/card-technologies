@@ -8,7 +8,13 @@ function App() {
 
   return (
     <section
-      className="max-x-xl mx-auto boder border-black min-h-dvh
+      className="w-full
+      max-w-3xl
+       mx-auto 
+       min-h-screen
+       px-4 sm:px-6
+        border border-white 
+
      bg-linear-to-b from-black via-sky-950 to-gray-800"
     >
       <header className="flex flex-col justify-center items-center">
@@ -16,7 +22,7 @@ function App() {
           src={profile}
           alt="Hola soy Cesar"
           className="h-85 object-contain
-          mask-radial-at center mask-radial-from-45% mask-radial-to-90%"
+          mask-radial-at-center mask-radial-from-40% mask-radial-to-85%"
         />
 
         <div
@@ -31,7 +37,7 @@ function App() {
             @br_cesarx
           </span>
 
-          <svg width={20} height={15} className=" fill-blue-500">
+          <svg className=" fill-blue-500 w-5 h-5 sm:h-8 md:w-10">
             <use href={"assets/sprite.svg#verified"}></use>
           </svg>
         </div>
@@ -47,7 +53,14 @@ function App() {
         </p>
       </header>
       <main className="pt-4 px-4 ">
-        <div className="grid grid-cols-3 grid-rows-2 gap-4">
+        <div
+          className="grid
+        grid-cols-1 /* mobile */
+        sm:grid-cols-3 /* tablets pequeñas */
+        md:grid-cols-3 /* tablets grandes / desktop */
+        gap-4
+         "
+        >
           {courses.map((item) => (
             <CardCourses key={item} name={item} />
           ))}

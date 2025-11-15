@@ -4,28 +4,28 @@ const COURSES_CONFIG = {
     color: "bg-gradient-to-br from-sky-400 via-sky-500 to-sky-600",
     img: "react",
     description: "Curso de React",
-    size: "col-span-2",
+    size: "col-span-2 sm:col-span-2 md:col-span-2",
   },
   css: {
     label: "CSS",
     color: "bg-gradient-to-br from-purple-800 via-purple-700 to-purple-500",
     img: "css",
     description: "Curso de CSS",
-    size: "col-span-1",
+    size: "col-span-2 sm:col-span-1 md:col-span-1",
   },
   node: {
     label: "Node",
     color: "bg-gradient-to-br from-lime-600 via-lime-500 to-lime-400",
     img: "node",
     description: "Curso de Node",
-    size: "col-span-1",
+    size: "col-span-2 sm:col-span-1 md:col-span-1",
   },
   html: {
     label: "HTML",
     color: "bg-gradient-to-br from-orange-600 via-orange-500 to-orange-400",
     img: "html",
     description: "Curso de HTML",
-    size: "col-span-2",
+    size: "col-span-2 sm:col-span-2 md:col-span-2",
   },
 } as const;
 
@@ -60,13 +60,12 @@ export const CardCourses = ({ name }: CourseProps) => {
       </span>
 
       <svg
-        width={100}
-        height={100}
         className="absolute -right-4 -bottom-4
               -rotate-6 size-28
               group-hover:-rotate-180
               group-hover:-scale-125
-              transition-transform"
+              transition-transform
+              w-25 h-25"
       >
         <use href={`assets/sprite.svg#${img}`}></use>
       </svg>
