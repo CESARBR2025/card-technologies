@@ -1,10 +1,13 @@
 import profile from "../src/assets/profile-image.jpg";
 import { SocialButton } from "./components/SocialButton";
 import { CardCourses } from "./components/CardCourses";
-import { TimeLine } from "./components/TimeLine";
+import { TimeLine } from "./pages/TimeLine";
+import { CardProject } from "./components/CardProject";
+
 function App() {
   const buttons = ["linkedin", "github", "instagram"] as const;
   const courses = ["react", "css", "node", "html"] as const;
+  const project = ["coolviz", "coolview"] as const;
 
   return (
     <section
@@ -62,31 +65,43 @@ bg-linear-to-b from-black via-sky-950 to-gray-800
 
         <main className="pt-4 px-4  flex flex-col">
           <section>
-            <h2 className="text-2xl text-white font-semibold pb-4">
+            <h2 className="text-2xl text-white font-semibold pb-4 pt-4">
               Experiencia
             </h2>
             <TimeLine />
           </section>
-          <section
-            className="gap-4 flex
-          flex-col"
-          >
-            <h2
-              className="text-2xl text-white font-bold
-          "
-            >
-              Tecnologias
-            </h2>
+
+          <section className="gap-4 flex flex-col">
+            <h2 className="text-2xl text-white font-bold pb-4">Tecnologias</h2>
             <div
-              className="grid
-        grid-cols-1 /* mobile */
-        sm:grid-cols-3 /* tablets pequeñas */
-        md:grid-cols-3 /* tablets grandes / desktop */
-        gap-4
-         "
+              className="
+              grid
+              grid-cols-1 /* mobile */
+              sm:grid-cols-3 /* tablets pequeñas */
+              md:grid-cols-3 /* tablets grandes / desktop */
+              gap-4"
             >
               {courses.map((item) => (
                 <CardCourses key={item} name={item} />
+              ))}
+            </div>
+          </section>
+
+          <section className="gap-4 flex flex-col pt-12">
+            <h2 className="text-2xl text-white font-bold pb-4">
+              Proyectos recientes
+            </h2>
+
+            <div
+              className="
+              grid
+              grid-cols-1 /* mobile */
+              sm:grid-cols-4 /* tablets pequeñas */
+              md:grid-cols-4 /* tablets grandes / desktop */
+              gap-4"
+            >
+              {project.map((item) => (
+                <CardProject key={item} name={item} />
               ))}
             </div>
           </section>

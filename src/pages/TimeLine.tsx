@@ -1,11 +1,15 @@
 export const TimeLine = () => {
   return (
     <section className=" p-8">
-      <ol className="relative border-s border-default border-gray-500">
+      <ol
+        className="relative border-s border-default
+       border-gray-500"
+      >
         <li className="mb-10 ms-6 ">
           <span
             className="absolute  bg-blue-500/30  flex items-center justify-center 
-          w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8 ring-sky-800/40"
+          w-6 h-6 bg-brand-softer rounded-full -start-3 ring-8
+           ring-sky-800/40"
           >
             <svg
               className="w-3 h-3 text-fg-brand-strong   stroke-blue-400"
@@ -57,7 +61,7 @@ export const TimeLine = () => {
             Ago 04, 2024 - Octubre 12, 2024
           </time>
           <h3 className="flex items-center mb-1 text-lg font-semibold text-heading my-2 text-white">
-            Ingeriero de Infraestructura TI
+            Ingeriero de Infraestructura TI - IMBERA TI
             <span className="ms-2 bg-brand-softer border border-blue-400/60 bg-blue-500/30 text-blue-300  text-xs font-medium px-1.5 py-0.5 rounded-lg">
               3 meses
             </span>
@@ -105,7 +109,6 @@ export const TimeLine = () => {
           </p>
         </li>
       </ol>
-      ;
     </section>
   );
 };
